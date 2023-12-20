@@ -1,12 +1,12 @@
-# A Reajt.js blog application
+# A React.js blog application
 
-This project showcases my first tries with React.js implementation usind Tailwind.js for further styling. JSON-server was used to access database.
+This project showcases my first tries with React.js implementation usind Tailwind.js for further styling. JSON-server was used to simulate a database.
 
 ## Quickstart
 
 ### `npx json-server --watch data/db.json --port 8008`
 
-Starts JSON-server to access database.
+Starts JSON-server with relevant data.
 
 ### `npm start`
 

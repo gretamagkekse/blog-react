@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Components/Navbar";
+import Home from "./Home";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Create from "./Create";
+import PostDetail from "./PostDetail";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <div className="bg-indigo-500">
+        <Router>
+
+                <Navbar/>
+                <div className="hidden lg:flex w-11/12 mx-auto h-1 bg-black"/>
+                <div className=" py-6 sm:py-12">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <Routes>
+                            <Route exact path="/" element={<Home/>}/>
+                            <Route path="/create" element={<Create/>}/>
+                            <Route path="/posts/:id" element={<PostDetail/>}/>
+                        </Routes>
+                    </div>
+                </div>
+
+        </Router>
+        </div>
+    );
 }
 
-export default App;

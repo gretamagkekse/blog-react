@@ -5,8 +5,8 @@ import {Link} from "react-router-dom";
 
 const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Create Blog', href: '/create' },
-    { name: 'My Profile', href: '/my-profile' },
+    { name: 'Create Post', href: '/create' },
+    // { name: 'My Profile', href: '/my-profile' },
 
 ]
 
@@ -14,14 +14,16 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="bg-white">
-            <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
-                    <Link to="/" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
-                        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-                    </Link>
-                </div>
+        <>
+
+        <header className="bg-indigo-500">
+            <nav className="flex items-center justify-between w-11/12 mx-auto py-6" aria-label="Global">
+                {/*<div className="flex lg:flex-1">*/}
+                {/*    <Link to="/" className="-m-1.5 p-1.5">*/}
+                {/*        <span className="sr-only">Your Company</span>*/}
+                {/*        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
                 <div className="flex lg:hidden">
                     <button
                         type="button"
@@ -40,12 +42,14 @@ export default function Navbar() {
                     ))}
                 </div>
 
+
             </nav>
+
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <a href="src/Components/Navbar#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             <img
                                 className="h-8 w-auto"
@@ -77,7 +81,7 @@ export default function Navbar() {
                             </div>
                             <div className="py-6">
                                 <a
-                                    href="#"
+                                    href="src/Components/Navbar#"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Log in
@@ -88,5 +92,7 @@ export default function Navbar() {
                 </Dialog.Panel>
             </Dialog>
         </header>
+
+        </>
     )
 }

@@ -2,6 +2,10 @@
 
 This project showcases my first tries with React.js implementation usind Tailwind.js for further styling. JSON-server was used to simulate a database.
 
+![Screenshot](blog-home.png)
+
+![Screenshot](blog-create.png)
+
 ## Quickstart
 
 ### `npx json-server --watch data/db.json --port 8008`

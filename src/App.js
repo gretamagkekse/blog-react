@@ -6,11 +6,11 @@ import PostDetail from "./PostDetail";
 
 export default function App() {
     return (
-        <div className="bg-indigo-500">
+        <div className="min-h-screen bg-indigo-500">
         <Router>
 
                 <Navbar/>
-                <div className="hidden lg:flex w-11/12 mx-auto h-1 bg-black"/>
+                <div className="flex w-11/12 mx-auto h-1 bg-black"/>
                 <div className=" py-6 sm:py-12">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <Routes>

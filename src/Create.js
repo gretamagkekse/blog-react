@@ -1,25 +1,49 @@
 import {useState} from 'react'
 import {Switch} from '@headlessui/react'
 
+
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 export default function Create() {
+    const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
     const [agreed, setAgreed] = useState(false);
+
     const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('Maria Garcia');
+    const [author, setAuthor] = useState('');
+    const [role, setRole] = useState('');
+    const [department, setDepartment] = useState('IT');
+
+    const datetime = new Date();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const post = {title, body, author};
+        
+        if (!title || !body || !author || !role || !department ) {
+            setErrorMessage('Please fill in all required fields.');
+            return;
+        }
+        if (!agreed) {
+            setErrorMessage('Please agree to the policies before submitting.');
+            return;
+        }
+        
+        const post = {title, body, datetime, department, author, role };
         fetch('http://localhost:8008/posts', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(post)
-        }).then(()=> {console.log('new post added')})
+        }).then(()=> {
+            setTitle('');
+            setBody('');
+            setAuthor('');
+            setRole('');
+            setDepartment('');
+            setErrorMessage('');
+            setSuccessMessage('Post submitted successfully!');})
     }
 
     return (
@@ -53,24 +77,10 @@ export default function Create() {
                             />
                         </div>
                     </div>
-                    <div className="sm:col-span-2">
-                        <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                            Description
-                        </label>
-                        <div className="mt-2.5">
-                            <input
-                                type="text"
-                                name="description"
-                                id="description"
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
-                                className="block w-full rounded-md border-0 bg-indigo-500 px-3.5 py-2 text-gray-900 shadow-sm ring-2 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                        </div>
-                    </div>
+                
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                        <label htmlFor="body" className="block text-sm font-semibold leading-6 text-gray-900">
                             Content
                         </label>
                         <div className="mt-2.5">
@@ -82,24 +92,58 @@ export default function Create() {
                   onChange={(e) => setBody(e.target.value)}
                   className="block w-full rounded-md border-0 bg-indigo-500 px-3.5 py-2 text-gray-900 shadow-sm ring-2 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 
-              />
-                        </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                        <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+              /></div>
+               </div>
+
+               <div className="sm:col-span-2">
+                        <label htmlFor="author" className="block text-sm font-semibold leading-6 text-gray-900">
                             Author
                         </label>
                         <div className="mt-2.5">
-                            <select
+                            <input
+                                type="text"
                                 name="author"
                                 id="author"
                                 value={author}
                                 onChange={(e) => setAuthor(e.target.value)}
                                 className="block w-full rounded-md border-0 bg-indigo-500 px-3.5 py-2 text-gray-900 shadow-sm ring-2 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            />
+                        </div>
+                    </div>
+                    <div className="sm:col-span-2">
+                        <label htmlFor="role" className="block text-sm font-semibold leading-6 text-gray-900">
+                            Role
+                        </label>
+                        <div className="mt-2.5">
+                            <input
+                                type="text"
+                                name="role"
+                                id="role"
+                                value={role}
+                                onChange={(e) => setRole(e.target.value)}
+                                className="block w-full rounded-md border-0 bg-indigo-500 px-3.5 py-2 text-gray-900 shadow-sm ring-2 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            />
+                        </div>
+                    </div>
+                        
+                   
+                    <div className="sm:col-span-2">
+                        <label htmlFor="department" className="block text-sm font-semibold leading-6 text-gray-900">
+                            Department
+                        </label>
+                        <div className="mt-2.5">
+                            <select
+                                name="department"
+                                id="department"
+                                value={department}
+                                onChange={(e) => setDepartment(e.target.value)}
+                                className="block w-full rounded-md border-0 bg-indigo-500 px-3.5 py-2 text-gray-900 shadow-sm ring-2 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             >
-                                <option value="Maria Garcia">Maria Garcia</option>
-                                <option value="Justin Hoffmann">Justin Hoffmann</option>
-                                <option value="Greta Moeller">Greta Moeller</option>
+                                <option value="IT">IT</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Operations">Operations</option>
+                                <option value="Design">Design</option>
                             </select>
                         </div>
                     </div>
@@ -141,6 +185,8 @@ export default function Create() {
                         Submit
                     </button>
                 </div>
+                { errorMessage && <div className="mt-4 text-rose-800">{errorMessage}</div> }
+                { successMessage && <div className="mt-4 ">{successMessage}</div> }
             </form>
 
 

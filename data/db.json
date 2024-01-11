@@ -3,41 +3,74 @@
     {
       "id": 1,
       "title": "Boost your conversion rate",
-      "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      "datetime": "2020-03-16",
-      "category": {
-        "title": "Marketing"
-      },
-      "author": {
-        "name": "Justin Hoffmann",
-        "role": "Co-Founder / CTO"
-      }
+      "body": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "datetime": "2023-01-11T22:43:29.485Z",
+      "department": "Marketing",
+      "author": "Justin Hoffmann",
+      "role": "Co-Founder / CTO"
     },
     {
       "id": 2,
       "title": "Boost your conversion rate",
-      "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      "datetime": "2022-03-16",
-      "category": {
-        "title": "IT"
-      },
-      "author": {
-        "name": "Greta Moeller",
-        "role": "Co-Founder / CTO"
-      }
+      "body": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "datetime": "2023-11-11T22:43:29.485Z",
+      "department": "IT",
+      "author": "Greta Moeller",
+      "role": "Co-Founder / CTO"
     },
     {
       "id": 3,
       "title": "Boost your conversion rate",
-      "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      "datetime": "2020-04-16",
-      "category": {
-        "title": "Design"
-      },
-      "author": {
-        "name": "Justin Hoffmann",
-        "role": "Co-Founder / CTO"
-      }
+      "body": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "datetime": "2020-09-01T22:43:29.485Z",
+      "department": "Design",
+      "author": "Justin Hoffmann",
+      "role": "Co-Founder / CTO"
+    },
+    {
+      "title": "Neuer Eintrag",
+      "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "datetime": "2014-02-11T22:43:29.485Z",
+      "department": "IT",
+      "author": "Greta Moeller",
+      "role": "CEO",
+      "id": 4
+    },
+    {
+      "title": "Testeintrag",
+      "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "datetime": "2022-05-25T22:43:29.485Z",
+      "department": "Operations",
+      "author": "David Muster",
+      "role": "CTO",
+      "id": 5
+    },
+    {
+      "title": "Test",
+      "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "datetime": "2023-02-11T22:43:29.485Z",
+      "department": "Operations",
+      "author": "David Muster",
+      "role": "CTO",
+      "id": 6
+    },
+    {
+      "title": "New Post",
+      "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "datetime": "2022-07-11T22:43:29.485Z",
+      "department": "Design",
+      "author": "Mike Müller",
+      "role": "Employee",
+      "id": 7
+    },
+    {
+      "title": "New Post",
+      "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "datetime": "2024-01-11T22:43:29.485Z",
+      "department": "Operations",
+      "author": "Magdalena Müller",
+      "role": "Boss",
+      "id": 8
     }
   ]
 }
